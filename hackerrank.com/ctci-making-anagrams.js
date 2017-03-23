@@ -23,26 +23,26 @@ function readLine() {
 /////////////// ignore above this line ////////////////////
 
 function main() {
-    var a = readLine();
-    var b = readLine();
-    var lettersA = lettersOccurences(a);
-    var lettersB = lettersOccurences(b);
-    var res = numberOfDifferences(lettersA, lettersB);
-    console.log(res);
+  var a = readLine();
+  var b = readLine();
+  var lettersA = lettersOccurences(a);
+  var lettersB = lettersOccurences(b);
+  var res = numberOfDifferences(lettersA, lettersB);
+  console.log(res);
 }
 
 function numberOfDifferences(a, b) {
-    var num = 0;
-    for (var i = 0; i < a.length; i++) {
-        num += Math.abs(a[i] - b[i]);
-    }
-    return num;
+  var num = 0;
+  for (var i = 0; i < a.length; i++) {
+    num += Math.abs(a[i] - b[i]);
+  }
+  return num;
 }
 
 function lettersOccurences(str) {
-    var table = new Array(26).fill(0);
-    for (var i = 0; i < str.length; i++) {
-        table[str.charCodeAt(i) - 'a'.charCodeAt(0)]++;
-    }
-    return table;
+  var table = new Array(26).fill(0);
+  for (var i = 0; i < str.length; i++) {
+    table[str.charCodeAt(i) - 'a'.charCodeAt(0)]++;
+  }
+  return table;
 }
