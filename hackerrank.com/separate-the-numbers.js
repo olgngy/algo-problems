@@ -9,7 +9,7 @@ var inputLineIdx = 0;
 
 process.stdin.on('data', function(data) {
   inputRaw += data;
- });
+});
 
 process.stdin.on('end', function() {
   inputLines = inputRaw.split("\n");
